@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import TwintLogo from '../../public/img/twintlogo.png'
-
+import EKIlogo from '../../public/img/EKIlogo.png'
 
 
 const Wrapper = styled.div`
@@ -27,7 +27,10 @@ const NavBar = styled.div`
 const Logo = styled.div`
     flex: 1;
     cursor: pointer;
+    margin-top: 20px;
 `
+
+
 const NavMenu = styled.div` 
     color: gold;
     flex: 9;
@@ -97,7 +100,7 @@ const MobileEntry2 = () => {
         <>
             <NavBar>
                 <Logo>
-                    <Image src={TwintLogo} width={220} />
+                    <Image src={EKIlogo} />
                 </Logo>
                 <NavMenu>
                     <div>item</div>

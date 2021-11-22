@@ -5,6 +5,7 @@ import MobileEntry from './MobileEntry'
 
 const Container = styled.div`
     width: 100%;
+    min-height: 100vh;
     height: auto;
     background-color: rgb(249, 222, 75);
     display: flex;
@@ -43,8 +44,10 @@ const Desc = styled.p`
 const Intro = () => {
     return (
         <Container>
-            <Title>Welcome to WU Hosted Solution Customer Journey</Title>
-            <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora porro iusto beatae adipisci facere quos atque labore ad alias voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora porro iusto beatae adipisci facere quos atque labore ad alias voluptatibus.</Desc>
+            <Title>Let's walk through CX WU@EKI ABMT 'receive'</Title>
+            <Desc>
+                
+            </Desc>
             
             <ScreenWrapper>
                 <MobileEntry />

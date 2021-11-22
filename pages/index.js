@@ -16,7 +16,7 @@ export default function Index() {
     <Container>
         
         <Head>
-          <title>RaiPay mockups</title>
+          <title>EkiTransfer To Account</title>
           <meta name="description" content="RaiPay" />
           <link rel="icon" href="#" /> 
         </Head>

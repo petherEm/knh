@@ -7,6 +7,7 @@ import WUlogo from '../../public/img/wu.png'
 import SonectLogo from '../../public/img/sonect.png'
 import IDver2 from '../../public/img/IDVer2.jpg'
 import RaiPayLogo from '../../public/img/raipaypng.png'
+import EKIlogo from '../../public/img/EKIlogo.png'
 
 const Wrapper = styled.div`
 
@@ -144,7 +145,7 @@ const MobileEntry5 = () => {
                     <Image src={RaiPayLogo} />
                 </Logo>
                 <NavMenu>
-                    <div>Hi, Piotr!</div>
+                    <div>Hello!</div>
                 </NavMenu>
             </NavBar>
                 <TopDesc>

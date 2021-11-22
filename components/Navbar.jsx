@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import Image from 'next/image'
+import EKIlogo from '../public/img/EKIlogo.png'
 
 const Container = styled.div`
     position: fixed;
@@ -47,18 +49,22 @@ const Navbar = () => {
     return (
 
         <Container>
-            <Link href="/"><Logo>WU Hosted</Logo></Link>
+            <Link href="/">
+                <Logo>
+                    <Image src={EKIlogo} width={50} height={50}/>
+                </Logo>
+            </Link>
             <UnorderedList>
                 <Link href="/existingCustJourney">
                     <NavItem>
                         Existing Customer
                     </NavItem>
                 </Link>
-                <Link href="/verificationJourney">
+                {/* <Link href="/verificationJourney">
                     <NavItem>
                         Verification
                     </NavItem>
-                </Link>
+                </Link> */}
                 {/* <Link href="#">
                     <NavItem>
                         Challenges

@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import WUlogo from '../../public/img/wu.png'
+import EKIlogo from '../../public/img/EKIlogo.png'
 import RaiPayLogo from '../../public/img/raipaypng.png'
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
 const Wrapper = styled.div`
 
@@ -26,7 +28,9 @@ const NavBar = styled.div`
 const Logo = styled.div`
     flex: 1;
     cursor: pointer;
+    margin-top: 20px;
 `
+
 const NavMenu = styled.div` 
     color: gold;
     flex: 9;
@@ -82,7 +86,7 @@ const Icon = styled.div`
     width: 75px;
     height: 95px;
     border-radius: 20px;
-    margin: 12px;
+    margin: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +135,7 @@ const MobileEntry3 = () => {
         <>
             <NavBar>
                 <Logo>
-                    <Image src={RaiPayLogo}  />
+                    <Image src={EKIlogo}  />
                 </Logo>
                 <NavMenu>
                     <div>Hi, Piotr!</div>
@@ -139,32 +143,27 @@ const MobileEntry3 = () => {
             </NavBar>
                 <TopDesc>
                     <div>
-                        <h3>RaiPay Services</h3>
+                        <h4>You have been successfully verified!</h4>
+                        <h3>EKI Transfers Services</h3>
                     </div>
                     
                 </TopDesc>
             <Main>
                 <Icons>
-                    <Icon style={{border:"none"}}>
+                    <Icon style={{border:'none', color: 'gold'}}>
                         <Image src={WUlogo} />
-                        <p>Western Union</p>
+                        <p>WU send money</p>
                     </Icon>
+                    <Icon style={{border:'none', color:"gold"}}>
+                        <AccountBalanceIcon  sx={{ fontSize: 70 }} />
+                        <p>WU receive money</p>
+                    </Icon>
+                    <Icon></Icon>
+                    <Icon></Icon>
+                    <Icon></Icon>
+                    <Icon></Icon>
                     
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
-                    <Icon></Icon>
+                    
                 </Icons>
 
             </Main>

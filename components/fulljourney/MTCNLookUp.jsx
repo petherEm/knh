@@ -2,13 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
+import TwintLogo from '../../public/img/twintlogo.png'
+import WUlogo from '../../public/img/wu.png'
+import SonectLogo from '../../public/img/sonect.png'
+import IDver2 from '../../public/img/IDVer2.jpg'
+import Selfie from '../../public/img/selfie2.jpg'
+import Step1 from '../../public/img/step1.jpg'
 import Turkey from '../../public/img/TurkeyFlag.png'
+import PFTwint from '../../public/img/PFTwint.png'
+
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import StoreIcon from '@mui/icons-material/Store';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import RaiPayLogo from '../../public/img/raipaypng.png'
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import EKIlogo from '../../public/img/EKIlogo.png'
+import { fontWeight } from '@mui/system'
 
 
 const Wrapper = styled.div`
@@ -32,7 +41,9 @@ const NavBar = styled.div`
 const Logo = styled.div`
     flex: 1;
     cursor: pointer;
+    margin-top: 20px;
 `
+
 const NavMenu = styled.div` 
     color: gold;
     flex: 9;
@@ -92,6 +103,7 @@ const MuiIcon = styled.div`
 
 const InputItem = styled.div`
     display: flex;
+    align-items: center;
     color: gold;
 
     h4 {
@@ -100,6 +112,27 @@ const InputItem = styled.div`
         
     }
 
+`
+
+const CountrySelection = styled.div` 
+    width: 90%;
+   
+    height: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
+const Country = styled.div`
+    flex: 1;
+    margin-left: 20px;
+`
+const CountryInput = styled.select` 
+    flex: 0.9;
+    margin: 10px;
+    height: 40px;
+    border-radius: 10px;
 `
 
 const Left = styled.div`
@@ -135,8 +168,7 @@ const TopDesc = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-
-
+        
     }
     
     
@@ -184,6 +216,18 @@ const Icon = styled.div`
 
 `
 const Input = styled.input`
+    width: 280px;
+    height: 35px;
+    border-radius: 10px;
+    margin-right: 15px;
+
+    &:focus {
+    outline: none !important;
+}
+
+`
+
+const InputAmount = styled.input`
     width: 180px;
     height: 35px;
     border-radius: 10px;
@@ -191,7 +235,20 @@ const Input = styled.input`
     &:focus {
     outline: none !important;
 }
+
 `
+
+const InputCountry = styled.select` 
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+
+    &:focus {
+    outline: none !important;
+    }
+`
+
+
 const Label = styled.p` 
     font-size: 12px;
 `
@@ -220,92 +277,90 @@ const Button = styled.button`
 
 `
 
-const MobileEntry7existing = () => {
+const MTCNLookUp = () => {
     return (
         <>
             <NavBar>
                 <Logo>
-                    <Image src={RaiPayLogo} />
+                    <Image src={EKIlogo} />
                 </Logo>
                 <NavMenu>
                     <div>Hi, Piotr!</div>
                 </NavMenu>
             </NavBar>
             <TopDesc>
-                <h2>Welcome Back!</h2>
-                <h3>Continue your payment to &#8205; <Image src={Turkey} width={50} height={30}/></h3>
+                <h2>Good Morning! Let's save your money at 
+                    <span style={{ color: "gold",  fontWeight:"300" }}> ** *** *** *** *** *** 3845 account 
+                    </span>
+                </h2>
             </TopDesc>
             <Main>
+
+                <CountrySelection>
+                    <Country>
+                        <h4>MTCN: </h4>
+                    </Country>
+                    <Input placeholder="012 345 6789" />
+
+                    {/* <CountryInput placeholder="Turkey">
+                        <option>Turkey</option>
+                        <option>Thailand</option>
+                        <option>China</option>
+                        <option>Germany</option>
+                        <option>Serbia</option>
+                    </CountryInput> */}
+
+                </CountrySelection>
+                
                 <InputItem>
                     <Left>
-                        <Input placeholder="300 EUR"/>
-                        <Label>You are sending</Label>
+                        <InputAmount placeholder="300 EUR"/>
+                        <Label>Expected Amount</Label>
                     </Left>
                     <Right>
-                        <Input placeholder="3.629 TRY"/>
-                        <Label>Receiver gets</Label>
+                        <InputCountry placeholder="Germany">
+                            <option>Germany</option>
+                            <option>Switzerland</option>
+                            <option>Austria</option>
+                            <option>United Kingdom</option>
+                            <option>United States</option>
+                        </InputCountry>
+                        <Label>Sending Country</Label>
                     </Right>
                 </InputItem>
-                    <h4>1 EUR = 12.10 TRY</h4>
-                    <p>How your receiver would like to pick up money?</p>
+                <InputItem>
+                    <Left>
+                        <InputAmount placeholder="John"/>
+                        <Label>Sender's First Name</Label>
+                    </Left>
+                    <Right>
+                        <InputAmount placeholder="Smith"/>
+                        <Label>Sender's Last Name</Label> 
+                    </Right>
+                </InputItem>
+                    <p>Where would you like to deposit your money</p>
                 <InputItem>
                     <Left>
                         <Card>
                             <MuiIcon>
                                 <CheckCircleIcon sx={{ fontSize: 30 }}/>
                             </MuiIcon>
-                            <StoreIcon sx={{ fontSize: 70 }}/>
-                            <p>Cash at WU location</p>
-                            <p><strong>Instant Payment</strong></p>
+                            <AccountBalanceIcon sx={{ fontSize: 60 }}/>
+                            <p>XYZ Bank Acc <br></br>***8456</p>
+
                         </Card>
                     </Left>
                     <Right>
                         <Card>
-                            <AccountBalanceIcon sx={{ fontSize: 70 }}/>
-                            <p>to Bank Account</p>
-                            <p><strong>Instant Payment</strong></p>
+                            <AccountBalanceIcon sx={{ fontSize: 60 }}/>
+                            <p>WWW Bank Acc <br></br>***9916</p>
+                            
                         </Card>
                         
                     </Right>
-                </InputItem>
-                    <p>You are paying with</p>
-                <InputItem>
-                    <Left>
-                        <Card>
-                            <MuiIcon>
-                                <CheckCircleIcon sx={{ fontSize: 30 }}/>
-                            </MuiIcon>
-                            <CreditCardIcon sx={{ fontSize: 70 }} />
-                            <p>RaiPay card ending:</p>
-                            <p><strong>3896</strong></p>
-                                
-                        </Card>
-                    </Left>
-                    <Right>
-                        <Card>
-                            <CreditCardIcon sx={{ fontSize: 70 }} />
-                            <p>MasterCard ending:</p>
-                            <p><strong>9936</strong></p>    
-                        </Card>
-                    </Right>
-                </InputItem>
-                <h3>Transaction Summary:</h3>
-                    <Hr />
-                    
+                </InputItem>    
             </Main>
                 
-                <InputItem style={{
-                        flexDirection: 'column', 
-                        backgroundColor: 'black',
-                        padding: '20px'
-                        }}>
-                    <h4>Send amount: 300 EUR</h4>
-                    <h4>Receiver gets: 3.629 TRY</h4>
-                    <h4>Fees: 3.5 EUR</h4>
-                    <h4>Destination Country: Turkey</h4>
-                    <h4>Delivery time: In seconds</h4>
-                    <h3><b>Total Amount: </b>303.5 EUR</h3>
-                </InputItem>
             <Bottom>
                 <Button>Continue</Button>
             </Bottom>
@@ -315,4 +370,4 @@ const MobileEntry7existing = () => {
     )
 }
 
-export default MobileEntry7existing
+export default MTCNLookUp

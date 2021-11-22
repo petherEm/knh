@@ -12,6 +12,8 @@ import MobileEntry9 from './MobileEntry9'
 import PaymentVerification from './PaymentVerification'
 import CheckRates from './CheckRates'
 import MobileEntry7existing from './MobileEntry7existing'
+import MTCNLookUp from './MTCNLookUp'
+import MobileEntry9receive from './MobileEntry9receive'
 
 
 const Container = styled.div`
@@ -67,7 +69,7 @@ const ExistingCustomer = () => {
     return (
         <Container>
             <Title>Existing Customer Journey</Title>
-            <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora porro iusto beatae adipisci facere quos atque labore ad alias voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora porro iusto beatae adipisci facere quos atque labore ad alias voluptatibus.</Desc>
+            <Desc></Desc>
             
             <ScreenWrapper>
                 <MobileEntry />
@@ -79,19 +81,11 @@ const ExistingCustomer = () => {
             </ScreenWrapperMain>
 
             <ScreenWrapperMain>
-                <CheckRates />
+                <MTCNLookUp />
             </ScreenWrapperMain>
 
             <ScreenWrapperMain>
-                <MobileEntry7existing />
-            </ScreenWrapperMain>
-
-            <ScreenWrapperMain>
-                <MobileEntry8 />
-            </ScreenWrapperMain>
-
-            <ScreenWrapperMain>
-                <MobileEntry9 />
+                <MobileEntry9receive />
             </ScreenWrapperMain>
 
         </Container>

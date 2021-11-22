@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Step1 from '../../public/img/step1.jpg'
 import RaiPayLogo from '../../public/img/raipaypng.png'
+import EKIlogo from '../../public/img/EKIlogo.png'
+
 
 const Wrapper = styled.div`
 

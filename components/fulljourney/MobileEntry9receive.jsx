@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import RaiPayLogo from '../../public/img/raipaypng.png'
 import CreditCardIcon from '@mui/icons-material/CreditCard';
-import EKIlogo from '../../public/img/EKIlogo.png'
+
 
 const Wrapper = styled.div`
 
@@ -44,10 +44,11 @@ const NavMenu = styled.div`
 const Main = styled.div`
     background-color: black;
     padding: 20px;
-    color: white;
+    color: gold;
     flex: 8;
     display: flex;
     flex-direction: column;
+    align-items: center;
     
     
 `
@@ -134,7 +135,7 @@ const Button = styled.button`
 
 `
 
-const MobileEntry8 = () => {
+const MobileEntry9receive = () => {
     return (
         <>
             <NavBar>
@@ -146,49 +147,22 @@ const MobileEntry8 = () => {
                 </NavMenu>
             </NavBar>
                 <TopDesc>
-                    <h3>Your Transaction is almost done!</h3>
-                    <h4>Please provide receiver's and transaction details</h4>
+                    <h1>Thank you! We are now saving your money from: </h1>
                 </TopDesc>
             <Main>
-                <div>
-                    <Input placeholder="John"/>
-                    <Label>
-                        Receiver First Name
-                    </Label>
-                </div>
-                <div>
-                    <Input placeholder="Smith" />
-                    <Label>
-                        Receiver Last Name
-                    </Label>
-                </div>
-                <div>
-                    <Input placeholder="Gift" />
-                    <Label>
-                        Reason of transaction
-                    </Label>
-                </div>
-                <div>
-                    <Input placeholder="Salary" />
-                    <Label>
-                        Source of funds
-                    </Label>
-                </div>
-                <div>
-                    <Input placeholder="Family" />
-                    <Label>
-                        Relationship to Receiver
-                    </Label>
-                </div>
+                
+                <h1>MTCN: 0123 456 789</h1>
+                <h2>to:</h2>
+                <h1>XYZ Bank Acc ***8456</h1>
                 
             </Main>
             <Bottom>
                 <Link href="/fullJourney">
-                    <Button>Send</Button>
+                    <Button>Next!</Button>
                 </Link>  
             </Bottom>
         </>
     )
 }
 
-export default MobileEntry8
+export default MobileEntry9receive

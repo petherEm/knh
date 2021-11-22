@@ -7,6 +7,8 @@ import WUlogo from '../../public/img/wu.png'
 import SonectLogo from '../../public/img/sonect.png'
 import IDver2 from '../../public/img/IDVer2.jpg'
 import RaiPayLogo from '../../public/img/raipaypng.png'
+import EKIlogo from '../../public/img/EKIlogo.png'
+
 
 const Wrapper = styled.div`
 
@@ -129,15 +131,14 @@ const MobileEntry4 = () => {
         <>
             <NavBar>
                 <Logo>
-                    <Image src={RaiPayLogo} />
+                    <Image src={EKIlogo} />
                 </Logo>
                 <NavMenu>
                     <div>Hi, Piotr!</div>
                 </NavMenu>
             </NavBar>
                 <TopDesc>
-                    <h3>Welcome to WU powered - Fast, reliable, send money service</h3>
-                    <h3>This is your first International Payment</h3>
+                    <h3>Welcome Piotr - Fast, reliable, send and receive money service</h3>
                     <h3 style={{textAlign: 'center', color: 'lightgreen'}}>Identity Verification required</h3>
                 </TopDesc>
             <Main>

@@ -8,6 +8,8 @@ import StoreIcon from '@mui/icons-material/Store';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import RaiPayLogo from '../../public/img/raipaypng.png'
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import EKIlogo from '../../public/img/EKIlogo.png'
+
 
 const Wrapper = styled.div`
 

@@ -6,7 +6,7 @@ import RaipayLogo from '../public/img/raipaypng.png'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-
+import EKIlogo from '../public/img/EKIlogo.png'
 
 const Wrapper = styled.div`
 
@@ -29,6 +29,7 @@ const NavBar = styled.div`
 const Logo = styled.div`
     flex: 1;
     cursor: pointer;
+    margin-top: 20px;
 `
 const NavMenu = styled.div` 
     color: gold;
@@ -137,10 +138,10 @@ const MobileEntry = () => {
         <>
             <NavBar>
                 <Logo>
-                    <Image src={RaipayLogo} />
+                    <Image src={EKIlogo} />
                 </Logo>
                 <NavMenu>
-                    <div>Hi, Piotr!</div>
+                    <div>Hello!</div>
                 </NavMenu>
             </NavBar>
                 <TopDesc>
@@ -148,16 +149,16 @@ const MobileEntry = () => {
                 </TopDesc>
             <Main>
             
-                <Image src={RaipayLogo} width={150} height={150} />
-                <h1>RaiPay</h1>
+                <Image src={EKIlogo} width={150} height={150} />
+                <h1 style={{marginLeft: '20px'}}>eWallet</h1>
                 <IconBar>
                     <IconItem>
                         <PhoneAndroidIcon sx={{ fontSize: 40 }}/>
-                        <p>Quick Payments</p>
+                        <p>WU MTCN deposits</p>
                     </IconItem>
                     <IconItem>
                         <ViewCarouselIcon sx={{ fontSize: 40 }}/>
-                        <p>All cards <br /> in one place</p>
+                        <p>Financial Services <br /> in one place</p>
                     </IconItem>
                     <IconItem>
                         <VerifiedUserIcon sx={{ fontSize: 40 }}/> 

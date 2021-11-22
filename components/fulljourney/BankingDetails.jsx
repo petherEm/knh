@@ -2,8 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
+import TwintLogo from '../../public/img/twintlogo.png'
+import WUlogo from '../../public/img/wu.png'
+import SonectLogo from '../../public/img/sonect.png'
+import IDver2 from '../../public/img/IDVer2.jpg'
 import RaiPayLogo from '../../public/img/raipaypng.png'
-import CreditCardIcon from '@mui/icons-material/CreditCard';
 import EKIlogo from '../../public/img/EKIlogo.png'
 
 const Wrapper = styled.div`
@@ -106,6 +109,30 @@ const Input = styled.input`
     outline: none !important;
 }
 `
+const InputBank = styled.select`
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    
+
+    &:focus {
+    outline: none !important;
+    }
+
+`
+
+const InputIBAN = styled.input`
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+
+    &:focus {
+    outline: none !important;
+    }
+
+`
+
+
 const Label = styled.p` 
     font-size: 12px;
 `
@@ -134,7 +161,7 @@ const Button = styled.button`
 
 `
 
-const MobileEntry8 = () => {
+const BankingDetails = () => {
     return (
         <>
             <NavBar>
@@ -142,53 +169,42 @@ const MobileEntry8 = () => {
                     <Image src={RaiPayLogo} />
                 </Logo>
                 <NavMenu>
-                    <div>Hi, Piotr!</div>
+                    <div>Hello!</div>
                 </NavMenu>
             </NavBar>
                 <TopDesc>
-                    <h3>Your Transaction is almost done!</h3>
-                    <h4>Please provide receiver's and transaction details</h4>
+                    <h3>Bank Details required to deposit WU Money Transfers</h3>
                 </TopDesc>
             <Main>
                 <div>
-                    <Input placeholder="John"/>
+                    <InputBank placeholder="Piotr">
+                        <option>Bank ZYX</option>
+                        <option>BNP Paribas</option>
+                        <option>Kredit Bank</option>
+                        <option>AgriBank</option>
+                        <option>BangBank</option>
+
+                    </InputBank>
                     <Label>
-                        Receiver First Name
+                        Select your bank
                     </Label>
                 </div>
                 <div>
-                    <Input placeholder="Smith" />
+                    <InputIBAN placeholder="10 1234 5678 9876 4321 356" />
                     <Label>
-                        Receiver Last Name
+                        Provide IBAN
                     </Label>
                 </div>
-                <div>
-                    <Input placeholder="Gift" />
-                    <Label>
-                        Reason of transaction
-                    </Label>
-                </div>
-                <div>
-                    <Input placeholder="Salary" />
-                    <Label>
-                        Source of funds
-                    </Label>
-                </div>
-                <div>
-                    <Input placeholder="Family" />
-                    <Label>
-                        Relationship to Receiver
-                    </Label>
-                </div>
+
                 
             </Main>
             <Bottom>
                 <Link href="/fullJourney">
-                    <Button>Send</Button>
+                    <Button>Continue</Button>
                 </Link>  
             </Bottom>
         </>
     )
 }
 
-export default MobileEntry8
+export default BankingDetails

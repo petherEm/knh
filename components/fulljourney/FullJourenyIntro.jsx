@@ -11,6 +11,9 @@ import MobileEntry8 from './MobileEntry8'
 import MobileEntry9 from './MobileEntry9'
 import PaymentVerification from './PaymentVerification'
 import CheckRates from './CheckRates'
+import MTCNLookUp from './MTCNLookUp'
+import BankingDetails from './BankingDetails'
+import MobileEntry9receive from './MobileEntry9receive'
 
 
 const Container = styled.div`
@@ -65,12 +68,32 @@ const Desc = styled.p`
 const FullJourneyInfo = () => {
     return (
         <Container>
-            <Title>RaiPay - First Time User</Title>
-            <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora porro iusto beatae adipisci facere quos atque labore ad alias voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora porro iusto beatae adipisci facere quos atque labore ad alias voluptatibus.</Desc>
+            <Title>EKI Wallet - First Time User</Title>
+            <Desc></Desc>
             
             <ScreenWrapper>
                 <MobileEntry />
             </ScreenWrapper>
+
+            <ScreenWrapperMain>
+                <MobileEntry5 />
+            </ScreenWrapperMain>
+
+            <ScreenWrapperMain>
+                <BankingDetails />
+            </ScreenWrapperMain>
+
+            <ScreenWrapperMain>
+                <MobileEntry4 />
+            </ScreenWrapperMain>
+
+            <ScreenWrapperMain>
+                <MobileEntry6 />
+            </ScreenWrapperMain>
+
+            {/* <ScreenWrapperMain>
+                <MobileEntry7 />
+            </ScreenWrapperMain> */}
 
             <ScreenWrapperMain>
                 <MobileEntry3 />
@@ -81,19 +104,11 @@ const FullJourneyInfo = () => {
             </ScreenWrapperMain>
 
             <ScreenWrapperMain>
-                <MobileEntry4 />
+                <MTCNLookUp />
             </ScreenWrapperMain>
 
             <ScreenWrapperMain>
-                <MobileEntry5 />
-            </ScreenWrapperMain>
-
-            <ScreenWrapperMain>
-                <MobileEntry6 />
-            </ScreenWrapperMain>
-
-            <ScreenWrapperMain>
-                <MobileEntry7 />
+                <MobileEntry9receive />
             </ScreenWrapperMain>
 
             <ScreenWrapperMain>
