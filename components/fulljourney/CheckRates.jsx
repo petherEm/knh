@@ -236,10 +236,11 @@ const Button = styled.button`
     border: none;
     font-size: 18px;
     background-color: rgb(79, 171, 234);
+    color: white;
     margin-bottom: 20px;
 
     &:hover {
-        background-color: goldenrod;
+        background-color: gray;
     }
 
 `
