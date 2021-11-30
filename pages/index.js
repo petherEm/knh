@@ -16,8 +16,8 @@ export default function Index() {
     <Container>
         
         <Head>
-          <title>EkiTransfer To Account</title>
-          <meta name="description" content="RaiPay" />
+          <title>KnH Payments</title>
+          <meta name="description" content="KnH" />
           <link rel="icon" href="#" /> 
         </Head>
        <Intro />

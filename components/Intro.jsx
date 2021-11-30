@@ -7,7 +7,7 @@ const Container = styled.div`
     width: 100%;
     min-height: 100vh;
     height: auto;
-    background-color: rgb(249, 222, 75);
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +44,7 @@ const Desc = styled.p`
 const Intro = () => {
     return (
         <Container>
-            <Title>Let's walk through CX WU@EKI ABMT 'receive'</Title>
+            <Title>Let's walk through customer experience</Title>
             <Desc>
                 
             </Desc>

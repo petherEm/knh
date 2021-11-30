@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ExistingCustomer from '../components/fulljourney/ExistingCustomer'
+import ReceiveCustomer from '../components/fulljourney/ReceiveCustomer'
 import styled from 'styled-components'
 
 
@@ -10,12 +10,12 @@ const Container = styled.div`
    
 `
 
-const existingCustJourney = () => {
+const ReceiveCustomerJourney = () => {
     return (
         <Container>
-            <ExistingCustomer />
+            <ReceiveCustomer />
         </Container>
     )
 }
 
-export default existingCustJourney
+export default ReceiveCustomerJourney

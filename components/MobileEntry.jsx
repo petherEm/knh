@@ -2,26 +2,39 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
-import RaipayLogo from '../public/img/raipaypng.png'
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import EKIlogo from '../public/img/EKIlogo.png'
+import KHlogo from '../public/img/knh.png'
+import BackgroundPhoto from '../public/img/background2.jpg'
+
+
 
 const Wrapper = styled.div`
+    position: absolute;
+    width: 470px;
+    min-height: 690px;
+    z-index: 200;
 
-
+`
+const Background = styled.div`
+    width: 100%;
+    min-height: 690px;
+    height: auto;
+    z-index: 20;
+    opacity: 0.9;
+    display: block;
+    filter: brightness(70%);
+    
+    
+    
 `
 
 const NavBar = styled.div`
-    background-color: black;
-    color: white;
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     
     padding-left: 20px;
+    z-index: 999;
 
 
 `
@@ -29,32 +42,36 @@ const NavBar = styled.div`
 const Logo = styled.div`
     flex: 1;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
 `
 const NavMenu = styled.div` 
-    color: gold;
+    color: rgb(79, 171, 234);
     flex: 9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-right: 20px;
     cursor: pointer;
 
     div {
         margin-right: 10px;
+        
     }
 `
 
 const Main = styled.div`
-    flex: 7;
+    flex: 5;
+    min-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    
     color: white;
     flex-wrap: wrap;
     
     h1 {
-        font-size: 50px;
+        text-align: center;
+        font-size: 60px;
         font-weight: 500;
     }
 `
@@ -83,7 +100,6 @@ const IconItem = styled.div`
 
 const TopDesc = styled.div`
     flex: 2;
-    background-color: black;
     color: gold;
     padding: 10px;
 
@@ -107,11 +123,13 @@ const Card = styled.div`
 `
 
 const Bottom = styled.div`
-    background-color: gold;
-    flex: 0.6;
+    
+    flex: 1;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 `
 
 const NavBottom = styled.div`
@@ -120,58 +138,63 @@ const NavBottom = styled.div`
 `
 
 const Button = styled.button`
-    width: 100%;
+    width: 90%;
     height: 50px;
-    border-radius: 20px;
     cursor: pointer;
     border: none;
+    margin-top: 20px;
     font-size: 18px;
-    background-color: gold;
+    background-color: rgb(79, 171, 234);
+    color: white;
     /* margin-bottom: 20px; */
     font-size: 20px;
     font-weight: 400;
+    border-radius: 5px;
 
 `
 
 const MobileEntry = () => {
     return (
         <>
-            <NavBar>
-                <Logo>
-                    <Image src={EKIlogo} />
-                </Logo>
-                <NavMenu>
-                    <div>Hello!</div>
-                </NavMenu>
-            </NavBar>
-                <TopDesc>
-                    <h3>How is it going today?</h3>
-                </TopDesc>
-            <Main>
-            
-                <Image src={EKIlogo} width={150} height={150} />
-                <h1 style={{marginLeft: '20px'}}>eWallet</h1>
-                <IconBar>
-                    <IconItem>
-                        <PhoneAndroidIcon sx={{ fontSize: 40 }}/>
-                        <p>WU MTCN deposits</p>
-                    </IconItem>
-                    <IconItem>
-                        <ViewCarouselIcon sx={{ fontSize: 40 }}/>
-                        <p>Financial Services <br /> in one place</p>
-                    </IconItem>
-                    <IconItem>
-                        <VerifiedUserIcon sx={{ fontSize: 40 }}/> 
-                        <p>Private <br /> and secure</p>
-                    </IconItem>
-                </IconBar>
+            <Background>
+                <Image src={BackgroundPhoto} layout="responsive" />
+            </Background>
+                <Wrapper>
+                    <NavBar>
+                        <NavMenu>
+                            <div>Burger</div>
+                        </NavMenu>
+                        <Logo>
+                            <Image src={KHlogo} />
+                        </Logo>
+                    </NavBar>
+                        <TopDesc>
+                            
+                        </TopDesc>
+                    <Main>
+                    
+                        <h1 style={{marginLeft: '20px'}}>K&H <br />mobilbank</h1>
+                        
+                        
 
-            </Main>
-            <Bottom>
-                <Link href="/fullJourney">
-                    <Button><b>Let's Go!</b></Button>
-                </Link>             
-            </Bottom>
+                    </Main>
+                    <Bottom>
+                        <Link href="/fullJourney">
+                            <Button><b>mobilbank login</b></Button>
+                        </Link>
+                        <Link href="/fullJourney">
+                            <Button><b>K&H+</b></Button>
+                        </Link>
+                        <Link href="/fullJourney">
+                            <Button><b>mobile-token authentication</b></Button>
+                        </Link>
+                        <Link href="/fullJourney">
+                            <Button><b>mobile-token signature</b></Button>
+                        </Link>
+                                      
+                    </Bottom>
+                    
+                </Wrapper>
         </>
     )
 }

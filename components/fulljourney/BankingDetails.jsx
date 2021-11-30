@@ -2,12 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
-import TwintLogo from '../../public/img/twintlogo.png'
-import WUlogo from '../../public/img/wu.png'
-import SonectLogo from '../../public/img/sonect.png'
-import IDver2 from '../../public/img/IDVer2.jpg'
-import RaiPayLogo from '../../public/img/raipaypng.png'
-import EKIlogo from '../../public/img/EKIlogo.png'
+import KHlogo from '../../public/img/knh.png'
 
 const Wrapper = styled.div`
 
@@ -15,14 +10,16 @@ const Wrapper = styled.div`
 `
 
 const NavBar = styled.div`
-    background-color: black;
-    color: white;
+    background-color: white;
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
-    
     padding-left: 20px;
+
+    -webkit-box-shadow: 3px 12px 24px 0px rgba(66, 68, 90, 0.36);
+    -moz-box-shadow: 3px 12px 24px 0px rgba(66, 68, 90, 0.36);
+    box-shadow: 3px 12px 24px 0px rgba(66, 68, 90, 0.36);
 
 
 `
@@ -30,36 +27,39 @@ const NavBar = styled.div`
 const Logo = styled.div`
     flex: 1;
     cursor: pointer;
+    margin-top: 10px;
+    margin-right: 20px;
+    align-items: flex-end;
 `
 const NavMenu = styled.div` 
-    color: gold;
+    color: rgb(79, 171, 234);
     flex: 9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-right: 20px;
     cursor: pointer;
 
     div {
         margin-right: 10px;
+        
     }
 `
 
 const Main = styled.div`
-    background-color: black;
-    padding: 20px;
-    color: white;
-    flex: 8;
+    background-color: white;
+    color: rgb(79, 171, 234);
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
     
 `
 
 const TopDesc = styled.div`
     flex: 1;
-    background-color: black;
+    background-color: white;
     padding: 20px;
-    color: white;
+    color: rgb(79, 171, 234);
     line-height: 1.5;
     text-align: center;
 `
@@ -100,15 +100,7 @@ const Icon = styled.div`
     }
 
 `
-const Input = styled.input`
-    width: 300px;
-    height: 28px;
-    border-radius: 10px;
 
-    &:focus {
-    outline: none !important;
-}
-`
 const InputBank = styled.select`
     width: 400px;
     height: 50px;
@@ -138,7 +130,7 @@ const Label = styled.p`
 `
 
 const Bottom = styled.div`
-    background-color: black;
+    background-color: white;
     flex: 2;
     display: flex;
     justify-content: center;
@@ -146,17 +138,21 @@ const Bottom = styled.div`
 `
 
 const Button = styled.button`
-    width: 80%;
+    width: 90%;
     height: 50px;
-    border-radius: 20px;
     cursor: pointer;
     border: none;
+    margin-top: 20px;
     font-size: 18px;
-    background-color: gold;
-    margin-bottom: 20px;
+    background-color: rgb(79, 171, 234);
+    color: white;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 5px;
 
     &:hover {
-        background-color: goldenrod;
+        background-color: gray;
     }
 
 `
@@ -166,10 +162,10 @@ const BankingDetails = () => {
         <>
             <NavBar>
                 <Logo>
-                    <Image src={RaiPayLogo} />
+                    <Image src={KHlogo} />
                 </Logo>
                 <NavMenu>
-                    <div>Hello!</div>
+                    <div>Hello, Piotr</div>
                 </NavMenu>
             </NavBar>
                 <TopDesc>

@@ -14,12 +14,13 @@ import CheckRates from './CheckRates'
 import MobileEntry7existing from './MobileEntry7existing'
 import MTCNLookUp from './MTCNLookUp'
 import MobileEntry9receive from './MobileEntry9receive'
+import MobileEntryMain from './MobileEntryMain'
 
 
 const Container = styled.div`
     width: 100%;
     height: auto;
-    background-color: rgb(249, 222, 75);
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +30,7 @@ const Container = styled.div`
 const ScreenWrapper = styled.div`
     background-color: white;
     margin-top: 40px;
+    margin-bottom: 40px;
     width: 470px;
     height: 690px;
     display: flex;
@@ -43,6 +45,7 @@ box-shadow: 8px 9px 24px -4px rgba(66, 68, 90, 1);
 const ScreenWrapperMain = styled.div`
     background-color: white;
     margin-top: 40px;
+    margin-bottom: 40px;
     width: 470px;
     min-height: 690px;
     height: auto;
@@ -50,8 +53,8 @@ const ScreenWrapperMain = styled.div`
     flex-direction: column;
     
     -webkit-box-shadow: 8px 9px 24px -4px rgba(66, 68, 90, 1);
--moz-box-shadow: 8px 9px 24px -4px rgba(66, 68, 90, 1);
-box-shadow: 8px 9px 24px -4px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 9px 24px -4px rgba(66, 68, 90, 1);
+    box-shadow: 8px 9px 24px -4px rgba(66, 68, 90, 1);
 
 
 `
@@ -65,7 +68,7 @@ const Desc = styled.p`
     width: 50%;
 `
 
-const ExistingCustomer = () => {
+const ReceiveCustomer = () => {
     return (
         <Container>
             <Title>Existing Customer Journey</Title>
@@ -77,7 +80,7 @@ const ExistingCustomer = () => {
 
 
             <ScreenWrapperMain>
-                <MobileEntry3 />
+                <MobileEntryMain />
             </ScreenWrapperMain>
 
             <ScreenWrapperMain>
@@ -92,4 +95,4 @@ const ExistingCustomer = () => {
     )
 }
 
-export default ExistingCustomer
+export default ReceiveCustomer

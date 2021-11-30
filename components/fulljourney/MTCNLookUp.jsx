@@ -17,6 +17,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import RaiPayLogo from '../../public/img/raipaypng.png'
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import EKIlogo from '../../public/img/EKIlogo.png'
+import KHlogo from '../../public/img/knh.png'
 import { fontWeight } from '@mui/system'
 
 
@@ -26,14 +27,13 @@ const Wrapper = styled.div`
 `
 
 const NavBar = styled.div`
-    background-color: black;
-    color: white;
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
-    
+    background-color: white;
     padding-left: 20px;
+    z-index: 999;
 
 
 `
@@ -41,25 +41,25 @@ const NavBar = styled.div`
 const Logo = styled.div`
     flex: 1;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
 `
-
 const NavMenu = styled.div` 
-    color: gold;
+    color: rgb(79, 171, 234);
     flex: 9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-right: 20px;
     cursor: pointer;
 
     div {
         margin-right: 10px;
+        
     }
 `
-
 const Main = styled.div`
-    background-color: black;
-    color: gold;
+    background-color: white;
+    color: rgb(79, 171, 234);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,8 +67,10 @@ const Main = styled.div`
     
 `
 
+
+
 const Card = styled.div`
-    border: 1px solid goldenrod;
+    border: 1px solid rgb(79, 171, 234);
     width: 130px;
     height: 130px;
     border-radius: 20px;
@@ -104,7 +106,7 @@ const MuiIcon = styled.div`
 const InputItem = styled.div`
     display: flex;
     align-items: center;
-    color: gold;
+    color: rgb(79, 171, 234);
 
     h4 {
         margin: 2px;
@@ -155,28 +157,18 @@ const Right = styled.div`
 `
 
 const TopDesc = styled.div`
-
-    background-color: black;
-    padding: 15px;
-    color: white;
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    color: rgb(79, 171, 234);
     line-height: 1.5;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    
-    h3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-    
 `
+
 
 const Hr = styled.hr`
     width: 90%;
-    color: gold;
+    color: rgb(79, 171, 234);
 `
 
 
@@ -254,25 +246,29 @@ const Label = styled.p`
 `
 
 const Bottom = styled.div`
-    background-color: black;
-    
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 `
 
 const Button = styled.button`
-    width: 80%;
+    width: 90%;
     height: 50px;
-    border-radius: 20px;
     cursor: pointer;
     border: none;
-    font-size: 18px;
-    background-color: gold;
+    margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 18px;
+    background-color: rgb(79, 171, 234);
+    color: white;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 5px;
 
     &:hover {
-        background-color: goldenrod;
+        background-color: gray;
     }
 
 `
@@ -281,16 +277,17 @@ const MTCNLookUp = () => {
     return (
         <>
             <NavBar>
-                <Logo>
-                    <Image src={EKIlogo} />
-                </Logo>
+                
                 <NavMenu>
                     <div>Hi, Piotr!</div>
                 </NavMenu>
+                <Logo>
+                    <Image src={KHlogo} />
+                </Logo>
             </NavBar>
             <TopDesc>
-                <h2>Good Morning! Let's save your money at 
-                    <span style={{ color: "gold",  fontWeight:"300" }}> ** *** *** *** *** *** 3845 account 
+                <h2>Good Morning! You selected WU transfer deposit to your K&H Bank
+                    <span style={{ color: "lightblue",  fontWeight:"bold" }}> ** *** *** *** *** *** 3845 account 
                     </span>
                 </h2>
             </TopDesc>
@@ -301,14 +298,6 @@ const MTCNLookUp = () => {
                         <h4>MTCN: </h4>
                     </Country>
                     <Input placeholder="012 345 6789" />
-
-                    {/* <CountryInput placeholder="Turkey">
-                        <option>Turkey</option>
-                        <option>Thailand</option>
-                        <option>China</option>
-                        <option>Germany</option>
-                        <option>Serbia</option>
-                    </CountryInput> */}
 
                 </CountrySelection>
                 

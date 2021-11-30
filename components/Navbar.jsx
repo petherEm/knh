@@ -3,14 +3,15 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import EKIlogo from '../public/img/EKIlogo.png'
+import KnHlogo from '../public/img/knh.png'
 
 const Container = styled.div`
     position: fixed;
     top: 0;
     width: 100%;
     height: 50px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,6 +19,10 @@ const Container = styled.div`
     font-size: 18px;
     text-decoration: none;
     z-index: 999;
+
+    -webkit-box-shadow: 3px 12px 24px 0px rgba(66, 68, 90, 0.36);
+    -moz-box-shadow: 3px 12px 24px 0px rgba(66, 68, 90, 0.36);
+    box-shadow: 3px 12px 24px 0px rgba(66, 68, 90, 0.36);
 
 
 `
@@ -37,7 +42,7 @@ const NavItem = styled.li`
     display: inline;
     margin-right: 30px;
     font-size: 14px;
-    color: lightgray;
+    color: black;
     cursor: pointer;
 
     &:hover {
@@ -51,13 +56,18 @@ const Navbar = () => {
         <Container>
             <Link href="/">
                 <Logo>
-                    <Image src={EKIlogo} width={50} height={50}/>
+                    <Image src={KnHlogo} width={50} height={50}/>
                 </Logo>
             </Link>
             <UnorderedList>
-                <Link href="/existingCustJourney">
+                <Link href="/fullJourney">
                     <NavItem>
-                        Existing Customer
+                        Send Flow
+                    </NavItem>
+                </Link>
+                <Link href="/ReceiveCustomerJourney">
+                    <NavItem>
+                        Receive flow
                     </NavItem>
                 </Link>
                 {/* <Link href="/verificationJourney">

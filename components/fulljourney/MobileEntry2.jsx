@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
-import TwintLogo from '../../public/img/twintlogo.png'
 import EKIlogo from '../../public/img/EKIlogo.png'
 
 
